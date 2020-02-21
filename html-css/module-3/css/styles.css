@@ -36,11 +36,10 @@ img {
 body {
   font-family: "Playfair Display", serif;
   background-color: rgb(255, 255, 255);
-  margin: 0 auto;
-  padding-top: 73px;
 }
 
 .container {
+  padding-top: 73px;
   width: 900px;
   margin: 0 auto;
 }
