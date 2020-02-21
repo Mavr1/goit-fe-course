@@ -35,43 +35,38 @@ img {
 
 body {
   font-family: "Playfair Display", serif;
-  width: 1200px;
   background-color: rgb(255, 255, 255);
   margin: 0 auto;
   padding-top: 73px;
 }
 
-section {
-  box-sizing: content-box;
-  padding: 1px;
+.container {
+  width: 900px;
+  margin: 0 auto;
 }
 
-nav ul {
+header {
+  margin-bottom: 98px;
+}
+
+.navi {
   list-style: none;
   text-align: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 98px;
   font-size: 0;
 }
 
-nav li:nth-child(1) {
-  margin-right: 122px;
+.navi-item:not(:last-child) {
+  margin-right: 100px;
 }
 
-nav li:nth-child(2) {
-  margin-right: 103px;
-}
-
-nav li:nth-child(3) {
-  margin-right: 95px;
-}
-
-nav li {
+.navi-item {
   display: inline-block;
 }
 
-a {
+.navi-link {
+  display: block;
   text-decoration: none;
   font-size: 14px;
   line-height: 24px;
@@ -79,31 +74,36 @@ a {
   text-transform: uppercase;
 }
 
-a:hover,
-a:focus {
+.navi-link:hover,
+.navi-link:focus {
   color: #03a9f4;
 }
 
-section ul {
+section {
+  box-sizing: content-box;
+  padding-bottom: 70px;
+}
+
+.entries {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 150px;
   font-size: 0px;
+  margin-bottom: 52px;
 }
 
-section li {
+.entries-item {
   display: inline-block;
-  width: 421px;
+  width: 420px;
   margin-bottom: 130px;
 }
 
-section li:nth-child(2n + 1) {
-  margin-right: 61px;
+.entries-item:nth-child(2n + 1) {
+  margin-right: 60px;
 }
 
-section li:nth-last-child(-n + 2) {
-  margin-bottom: 52px;
+.entries-item:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 article img {
@@ -147,5 +147,4 @@ button {
   color: #626262;
   cursor: pointer;
   margin: 0 auto;
-  margin-bottom: 70px;
 }
