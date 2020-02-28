@@ -38,8 +38,12 @@ img {
   clear: both;
 }
 
-.container {
+body {
   padding-top: 36px;
+  padding-bottom: 40px;
+}
+
+.container {
   width: 1110px;
   margin: 0 auto;
 }
@@ -97,7 +101,7 @@ header {
   color: #1abc9c;
 }
 
-h2 {
+.heading {
   font-size: 48px;
   font-family: "Roboto";
   font-weight: 900;
@@ -108,16 +112,16 @@ h2 {
   margin: 0 auto;
   margin: 0;
   padding: 0;
+  margin-bottom: 92px;
 }
 
-h2::after {
+.heading::after {
   content: "";
   display: block;
   width: 164px;
   height: 7px;
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 92px;
   background-color: #1abc9c;
 }
 
@@ -136,7 +140,16 @@ h2::after {
   float: left;
 }
 
-.product-item:hover > .product-name {
+.product-item:nth-last-child(-n + 4) {
+  margin-bottom: 0px;
+}
+
+.product-item-link {
+  display: block;
+  text-decoration: none;
+}
+
+.product-item-link:hover > .product-name {
   background-color: rgb(26, 188, 156);
 }
 
@@ -181,7 +194,6 @@ h2::after {
   margin: auto;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
 }
 
 .news-item {
@@ -228,7 +240,7 @@ h3::after {
   margin-bottom: 14px;
 }
 
-button {
+.button-article {
   display: block;
   border-radius: 3px;
   background-color: rgb(78, 198, 171);
@@ -244,4 +256,8 @@ button {
   line-height: 1.625;
   text-align: center;
   border: none;
+}
+
+.button-article:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
 }
