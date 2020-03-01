@@ -40,7 +40,6 @@ img {
 
 body {
   padding-top: 36px;
-  padding-bottom: 40px;
 }
 
 .container {
@@ -126,11 +125,15 @@ header {
 }
 
 .products {
+padding-bottom: 112px;  
+}
+
+
+.products-list {
   list-style: none;
   margin: auto;
   margin: 0;
   padding: 0;
-  margin-bottom: 112px;
 }
 
 .product-item {
@@ -194,6 +197,7 @@ header {
   margin: auto;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
 }
 
 .news-item {
@@ -240,8 +244,8 @@ h3::after {
   margin-bottom: 14px;
 }
 
-.button-article {
-  display: block;
+.link-article {
+  display: inline-block;
   border-radius: 3px;
   background-color: rgb(78, 198, 171);
   height: 51px;
@@ -253,11 +257,11 @@ h3::after {
   font-family: "Open Sans";
   font-weight: 300;
   color: rgb(255, 255, 255);
-  line-height: 1.625;
+  line-height: 51px;
   text-align: center;
   border: none;
 }
 
-.button-article:hover {
+.link-article:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
 }
