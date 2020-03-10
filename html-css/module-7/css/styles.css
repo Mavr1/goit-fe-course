@@ -1,0 +1,309 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Wisdom Script AI";
+  src: url("../fonts/Wisdom\ Script\ AI.woff2") format("woff2");
+  src: url("../fonts/Wisdom\ Script\ AI.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserratbold.woff2") format("woff2");
+  src: url("../fonts/montserratbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  src: url("../fonts/droidserifitalic.woff2") format("woff2");
+  src: url("../fonts/droidserifitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/Robotoslabregular.woff2") format("woff2");
+  src: url("../fonts/Robotoslabregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 935px;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 42px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Wisdom Script AI";
+  font-weight: 400;
+  color: #fed136;
+  line-height: 1.577;
+}
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navi-link {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 2.929;
+  transition: color 0.2s linear;
+}
+
+.navi-link:hover,
+.navi-link:focus {
+  color: #fed136;
+}
+
+.services {
+  padding-top: 96px;
+  padding-bottom: 122px;
+}
+
+.heading {
+  font-size: 40px;
+  font-family: "Montserrat";
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.875;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.postheading {
+  font-size: 16px;
+  font-family: "Droid Serif";
+  color: rgb(119, 119, 119);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 150px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin: auto;
+}
+
+.services-list-item {
+  position: relative;
+  width: 294px;
+  text-align: center;
+}
+
+.services-list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(254, 209, 54);
+  border-radius: 50%;
+  background-image: url("../img/Icon-Basket.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services-list-item:nth-child(2):before {
+  background-image: url("../img/Icon-Laptop.png");
+}
+
+.services-list-item:nth-child(3):before {
+  background-image: url("../img/Icon-Locked.png");
+}
+
+.services-item-link {
+  display: block;
+  text-decoration: none;
+}
+
+.services-item-head {
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  line-height: 4.167;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -8px;
+}
+
+.services-item-text {
+  font-size: 14px;
+  font-family: "Roboto Slab";
+  color: rgb(119, 119, 119);
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.contact {
+  height: 676px;
+  background-color: #222222;
+  background-image: url("../img/Map.png");
+  background-repeat: no-repeat;
+  background-position: bottom 20px right;
+  padding-top: 106px;
+}
+
+.contact > .heading {
+  color: rgb(255, 255, 255);
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+
+.contact > .postheading {
+  margin-bottom: 78px;
+}
+
+.contact-data {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 942px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-item:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.contact-item-input {
+  border: solid 1px rgb(204, 204, 204);
+  background-color: rgb(255, 255, 255);
+  width: 459px;
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.small {
+  border-radius: 2px;
+  height: 54px;
+}
+
+.large {
+  padding: 18px;
+  border-radius: 5px;
+  height: 214px;
+  resize: none;
+}
+
+.contact-item-input::placeholder {
+  color: rgb(187, 187, 187);
+}
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(254, 209, 54);
+  width: 240px;
+  height: 66px;
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.contact-item-input:valid {
+  background-color: rgb(208, 255, 208);
+}
+
+.contact-item-input:invalid {
+  background-color: rgb(253, 208, 208)
+}
