@@ -12,12 +12,13 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Homework Module 5</title>
   </head>
   <body>
-    <div class="container">
-      <header>
+    <header>
+      <div class="container">
         <nav class="main-nav clearfix">
           <a href="#" class="logo">Mart</a>
           <ul class="navi clearfix">
@@ -41,85 +42,99 @@
             </li>
           </ul>
         </nav>
-      </header>
-      <main>
-        <h1 class="visually-hidden">Mart's Main Page</h1>
-        <div class="slider">
-          <img
-            src="img/slide4.jpg"
-            width="1600px"
-            height="600px"
-            alt="four girls having fan"
-          />
-          <div class="slider-text">
-            <h3 class="slider-main-text">Affordable Paris Tours</h3>
-            <p class="slider-common-text">
-              City tours / Tour tickets / Tour guides
-            </p>
-          </div>
-          <button class="slider-button prev">Prev</button>
-          <button class="slider-button next">Next</button>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Mart's Main Page</h1>
+      <div class="slider">
+        <img
+          class="slider__image"
+          src="img/slide4.jpg"
+          width="1600"
+          height="600"
+          alt="four girls having fan"
+        />
+        <div class="slider__text">
+          <h3 class="slider__main-text">Affordable Paris Tours</h3>
+          <p class="slider-common-text">
+            City tours / Tour tickets / Tour guides
+          </p>
         </div>
-        <section class="collection">
-          <h2 class="heading">New Collection</h2>
-          <ul class="collection-list clearfix">
-            <li class="collection-list-item">
-              <a class="collection-item-link" href="#">
-                <img src="img/category-2.jpg" alt="blue tshirt" />
-                <p class="collection-name clearfix">
-                  Blue Tshirt <span class="price">$26</span>
-                </p>
-              </a>
-            </li>
-            <li class="collection-list-item">
-              <!-- <a class="collection-item-link" href="#"> -->
-              <img src="img/category-1.jpg" alt="Woman Shirt" />
-              <p class="collection-name">
-                Woman Shirt <span class="price">$31</span>
+        <button class="slider-button prev">
+          <span class="pe-7s-angle-left"></span>
+        </button>
+        <button class="slider-button next">
+          <span class="pe-7s-angle-right"></span>
+        </button>
+      </div>
+      <section class="collection">
+        <h2 class="heading">New Collection</h2>
+        <ul class="collection-list clearfix">
+          <li class="collection-list-item">
+            <a class="collection-item-link" href="#">
+              <img src="img/category-2.jpg" alt="blue tshirt" />
+              <p class="collection-name clearfix">
+                Blue Tshirt <span class="price">$26</span>
               </p>
-              <!-- </a> -->
-              <div class="overlay">
-                <ul class="icon-block clearfix">
-                  <li class="icon">
-                    <a href="#" class="icon-link">heart</a>
-                  </li>
-                  <li class="icon">
-                    <a href="#" class="icon-link">arrows</a>
-                  </li>
-                  <li class="icon">
-                    <a href="#" class="icon-link">clock</a>
-                  </li>
-                  <li class="icon">
-                    <a href="#" class="icon-link">cart <span class="add-to">Add to Cart</span></a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="collection-list-item">
-              <a class="collection-item-link" href="#">
-                <img src="img/category-4.jpg" alt="Yellow Tshirt" />
-                <p class="collection-name">
-                  Yellow Tshirt <span class="price">$21</span>
-                </p>
-              </a>
-            </li>
-            <li class="collection-list-item">
-              <a class="collection-item-link" href="#">
-                <img src="img/category-3.jpg" alt="Cool Lingerie" />
-                <p class="collection-name">
-                  Cool Lingerie <span class="price">$56</span>
-                </p>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="copyright">
-        <p>
-          All Rights Reserved © Dokan | Designed
-          <span class="Themen">ThemenGraph</span>
-        </p>
-      </footer>
-    </div>
+            </a>
+          </li>
+          <li class="collection-list-item">
+            <!-- <a class="collection-item-link" href="#"> -->
+            <img src="img/category-1.jpg" alt="Woman Shirt" />
+            <p class="collection-name">
+              Woman Shirt <span class="price">$31</span>
+            </p>
+            <!-- </a> -->
+            <div class="overlay">
+              <ul class="icon-block clearfix">
+                <li class="icon">
+                  <a href="#" class="icon-link"
+                    ><span class="pe-7s-like"></span
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a href="#" class="icon-link"
+                    ><span class="pe-7s-shuffle"></span
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a href="#" class="icon-link"
+                    ><span class="pe-7s-clock"></span
+                  ></a>
+                </li>
+                <li class="icon">
+                  <a href="#" class="icon-link clearfix">
+                    <div class="big-icon pe-7s-cart"></div>
+                    <div class="big-icon add-to">Add to Cart</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="collection-list-item">
+            <a class="collection-item-link" href="#">
+              <img src="img/category-4.jpg" alt="Yellow Tshirt" />
+              <p class="collection-name">
+                Yellow Tshirt <span class="price">$21</span>
+              </p>
+            </a>
+          </li>
+          <li class="collection-list-item">
+            <a class="collection-item-link" href="#">
+              <img src="img/category-3.jpg" alt="Cool Lingerie" />
+              <p class="collection-name">
+                Cool Lingerie <span class="price">$56</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="copyright">
+      <p>
+        All Rights Reserved © Dokan | Designed
+        <a href="#" class="themen">ThemenGraph</a>
+      </p>
+    </footer>
   </body>
 </html>
