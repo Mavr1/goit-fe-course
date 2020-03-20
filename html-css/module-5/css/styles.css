@@ -102,7 +102,6 @@ header {
 .slider {
   position: relative;
   margin: 0 auto;
-  max-width: 1600px;
 }
 
 .slider::after {
@@ -125,9 +124,8 @@ header {
 
 .slider__image {
   display: block;
-  margin: 0 auto;
-  object-fit: contain;
   object-position: top;
+  width: 100%;
 }
 
 .slider__heading {
