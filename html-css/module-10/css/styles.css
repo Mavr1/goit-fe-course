@@ -490,3 +490,20 @@ img {
   line-height: 40px;
   text-align: center;
 }
+
+@media (min-resolution: 192dpi), (min-resolution: 2ddpx) {
+  .header {
+    background-image: -o-linear-gradient(
+        left,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url("../img/Header@2x.jpg");
+    background-image: linear-gradient(
+        90deg,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url("../img/Header@2x.jpg");
+  }
+}
