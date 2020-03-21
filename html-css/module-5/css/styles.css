@@ -230,7 +230,7 @@ header {
   float: left;
 }
 
-.collection__item-foto{
+.collection__item-foto {
   position: relative;
 }
 
@@ -281,12 +281,14 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 80px;
   z-index: -1;
 }
 
 .icon-block {
   list-style: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   width: 168px;
   padding: 0;
   margin: 0 auto;
