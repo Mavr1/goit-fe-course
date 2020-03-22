@@ -50,7 +50,7 @@ header {
 .logo {
   text-decoration: none;
   font-size: 30px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: #95e1d3;
   line-height: 1.2;
@@ -58,31 +58,44 @@ header {
 
 .navi {
   display: flex;
-  justify-content: space-between;
-  width: 490px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.navi-item:not(:last-child) {
+  margin-right: 54px;
 }
 
 .navi-link {
   display: block;
   text-decoration: none;
   font-size: 14px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #95e1d3;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.2;
-  padding-bottom: 7px;
-  border-bottom: 3px solid rgba(243, 129, 129, 0);
-  transition: color 0.2s linear, border-bottom 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.navi-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(243, 129, 129, 0);
+  margin-top: 10px;
+  transition: all 0.2s linear;
+}
+
+.navi-item:hover .navi-link::after {
+  background-color: rgba(243, 129, 129, 1);
 }
 
 .navi-link:hover,
 .navi-link:focus {
   color: #f38181;
-  border-bottom: 3px solid rgba(243, 129, 129, 1);
 }
 
 .services {
@@ -91,14 +104,16 @@ header {
 }
 
 .preheading {
+  display: block;
   font-size: 24px;
   font-family: "Kaushan Script";
+  font-weight: normal;
   color: rgb(51, 51, 51);
   line-height: 1.2;
   text-align: center;
-  margin: 0;
+  text-transform: initial;
+  margin: 0 0 18px;
   padding: 0;
-  margin-bottom: 18px;
 }
 
 .heading {
@@ -109,9 +124,8 @@ header {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  margin: 0;
+  margin: 0 0 68px;
   padding: 0;
-  margin-bottom: 68px;
 }
 
 .heading::after {
@@ -119,8 +133,7 @@ header {
   display: block;
   width: 60px;
   height: 3px;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 40px auto 0;
   background-color: #f38181;
 }
 
@@ -128,16 +141,14 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1180px;
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .services-list-item {
   position: relative;
-  width: 380px;
+  flex-basis: 380px;
   padding-left: 80px;
 }
 
@@ -184,19 +195,18 @@ header {
 
 .services-item-head {
   font-size: 14px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: rgb(51, 51, 51);
   text-transform: uppercase;
   line-height: 1.2;
-  margin: 0;
+  margin: 0 0 18px;
   padding: 0;
-  margin-bottom: 18px;
 }
 
 .services-item-text {
   font-size: 15px;
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
   color: rgb(153, 153, 153);
   line-height: 1.6;
   margin: 0;
@@ -209,14 +219,12 @@ header {
 
 .team-intro {
   font-size: 15px;
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
   color: rgb(153, 153, 153);
   line-height: 1.6;
   text-align: center;
-  margin: 0;
+  margin: -24px 0 90px;
   padding: 0;
-  margin-top: -24px;
-  margin-bottom: 90px;
 }
 
 .team-list {
@@ -227,25 +235,26 @@ header {
   margin: 0;
 }
 
-.team-list-item {
+.team-photo {
   position: relative;
+  margin-bottom: 30px;
+  transition: all 0.2s linear;
 }
 
 .name {
   font-size: 14px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: rgb(51, 51, 51);
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  margin: 0;
+  margin: 0 0 14px;
   padding: 0;
-  margin-bottom: 14px;
 }
 
 .possition {
   font-size: 15px;
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
   font-weight: 300;
   color: rgb(153, 153, 153);
   font-style: italic;
@@ -255,14 +264,9 @@ header {
   padding: 0;
 }
 
-.team-photo {
-  margin-bottom: 30px;
-  transition: all 0.2s linear;
-}
-
 .overlay {
-  width: 380px;
-  height: 470px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   background: linear-gradient(
@@ -271,21 +275,20 @@ header {
     rgba(243, 129, 129, 0.9) 100%
   );
   opacity: 0;
+  visibility: hidden;
   transition: all 0.2s linear;
 }
 
 .overlay-icons {
   display: flex;
-  position: absolute;
-  justify-content: space-between;
-  width: 227px;
-  top: 206px;
-  left: 50%;
-  transform: translatex(-50%);
-  opacity: 1;
+  width: max-content;
+  background-color: rgb(243, 129, 129);
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .icon {
@@ -293,6 +296,10 @@ header {
   width: 56px;
   height: 56px;
   transition: all 0.2s linear;
+}
+
+.icon:not(:last-child) {
+  margin-right: 1px;
 }
 
 .icon:first-child {
@@ -311,18 +318,15 @@ header {
   background-image: url("../img/instagram.png");
 }
 
-.team-list-item:hover > .team-photo {
+.team-photo:hover {
   box-shadow: 10px 10px #95e1d3;
   transform: translate(-10px, -10px);
   cursor: pointer;
 }
 
-.team-list-item:hover > .overlay {
-  transform: translate(-10px, -10px);
-}
-
-.team-list-item:hover > .overlay {
+.team-photo:hover > .overlay {
   opacity: 1;
+  visibility: visible;
   cursor: pointer;
 }
 
@@ -330,31 +334,34 @@ header {
   background-color: #95e1d3;
 }
 
-.copyright {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  font-family: "Montserrat";
-  color: rgb(51, 51, 51);
   border-top: 1px solid #e5e5e5;
-  height: 62px;
+  padding: 10px 0;
 }
 
-.copyright p {
+.copyright {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
   margin: 0;
   padding: 0;
 }
-
-.Laaqiq {
+.copyright-link {
   color: #f38181;
   text-decoration: none;
+}
+
+.copyright-link:hover {
+  text-shadow: 2px 2px 4px rgb(160, 160, 160);
 }
 
 .subscribe {
   display: flex;
 }
-.mail-field {
+.subscribe-email {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(231, 231, 231);
@@ -363,11 +370,17 @@ header {
   height: 40px;
   padding-left: 12px;
   font-size: 15px;
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.subscribe-email::placeholder {
   color: rgb(204, 204, 204);
   font-style: italic;
+  line-height: 40px;
   font-weight: 300;
-  line-height: 1.6;
 }
 
 .subscribe-button {
