@@ -188,11 +188,6 @@ header {
   background-image: url("../img/IMAGE.png");
 }
 
-.services-item-link {
-  display: block;
-  text-decoration: none;
-}
-
 .services-item-head {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
