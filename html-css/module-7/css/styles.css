@@ -139,7 +139,7 @@ header {
   font-style: italic;
   line-height: 1.2;
   text-align: center;
-  margin: 0 0 150px;
+  margin: 0 0 78px;
   padding: 0;
 }
 
@@ -153,7 +153,6 @@ header {
 }
 
 .services-list-item {
-  position: relative;
   flex-basis: 294px;
   text-align: center;
 }
@@ -161,10 +160,7 @@ header {
 .services-list-item::before {
   content: "";
   display: block;
-  position: absolute;
-  top: -72px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   width: 72px;
   height: 72px;
   border: 3px solid rgb(254, 209, 54);
