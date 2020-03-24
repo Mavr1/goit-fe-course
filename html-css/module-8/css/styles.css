@@ -85,7 +85,6 @@ header {
 
 .navi {
   display: flex;
-  width: max-content;
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -126,7 +125,6 @@ header {
 .holiday {
   background-image: url("../img/bg-sm.png"),
     linear-gradient(rgb(26, 25, 21), rgb(26, 25, 21));
-  max-width: 380px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
