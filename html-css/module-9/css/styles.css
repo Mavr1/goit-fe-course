@@ -54,16 +54,11 @@ img {
   font-style: normal;
 }
 
-.background {
-  background-image: url("../img/Small.jpg");
-  background-repeat: no-repeat;
-  max-width: 320px;
-  margin: 0 auto;
-  padding-bottom: 56px;
-}
-
 header {
-  padding-top: 20px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navi {
@@ -72,71 +67,77 @@ header {
   margin-bottom: 116px;
 }
 
-.navi-link {
+.navi-btn {
   display: block;
-  text-decoration: none;
   text-align: center;
+  background-color: transparent;
   color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   line-height: 30px;
   font-size: 14px;
-  font-family: "Montserrat";
-  transition: border 0.2s linear;
   box-sizing: content-box;
-  border-style: solid;
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: rgba(255, 255, 255, 0);
-  padding: 0 18px;
+  padding: 0 20px;
   height: 32px;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.navi-link:hover {
-  border-color: rgb(255, 255, 255);
+.navi-btn--signup {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 0 18px;
 }
 
 .logo {
   display: block;
   text-decoration: none;
   font-size: 20px;
-  font-family: "Montserrat";
-  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
 }
 
 .holiday {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 28px;
+  padding-top: 230px;
   padding-bottom: 138px;
+  background-image: url("../img/bg-sm.png"),
+    linear-gradient(rgb(26, 25, 21), rgb(26, 25, 21));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .heading {
   font-size: 30px;
-  font-family: "Montserrat";
-  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
   padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
+  white-space: nowrap;
+}
+
+.heading_br, .postheading_br {
+  display: block;
 }
 
 .postheading {
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
   font-weight: 300;
   color: rgb(255, 255, 255);
   line-height: 1.2;
-  margin: 0;
   padding: 0;
-  margin: 0 auto;
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
   text-align: center;
 }
 
@@ -147,35 +148,42 @@ header {
   max-width: 280px;
   height: 40px;
   font-size: 14px;
-  font-family: "Montserrat";
-  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  color: rgb(255, 255, 255);
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  margin: 0;
   padding: 0;
   margin: 0 auto;
 }
 
 .partner {
   padding-top: 66px;
-}
-
-.partners-list {
-  padding-bottom: 28px;
+  padding-bottom: 56px;
 }
 
 .heading-partner {
   font-size: 22px;
-  font-family: "Montserrat";
-  color: rgb(51, 51, 51);
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  color: rgb(51, 51, 51);
   line-height: 1.2;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.mb-14 {
   margin-bottom: 14px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.partners-list {
+  margin: 0 auto;
 }
 
 .partners-list-item {

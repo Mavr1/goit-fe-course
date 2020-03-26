@@ -1,28 +1,21 @@
 @media screen and (min-width: 768px) {
-.background {
-  background-image: url("../img/Medium.jpg");
-  max-width: 768px;
-}
+  .holiday {
+    padding-top: 222px;
+    background-image: url("../img/bg-med.png"),
+      linear-gradient(rgb(26, 25, 21), rgb(26, 25, 21));
+    padding-bottom: 212px;
+  }
 
   header {
     padding-top: 38px;
   }
 
-  .main-nav {
-    flex-direction: row;
-    height: 36px;
-    margin: 0 auto;
+  .ph-md-44 {
+    padding: 0 44px;
   }
 
   .navi {
-    margin-left: auto;
-    margin-right: 0;
     margin-bottom: 0;
-  }
-
-  .holiday {
-    padding-top: 142px;
-    padding-bottom: 212px;
   }
 
   .heading {
@@ -33,7 +26,10 @@
   .postheading {
     font-size: 24px;
     margin-bottom: 34px;
-    width: 600px;
+  }
+
+  .postheading_br {
+    display: inline;
   }
 
   .button-find {
@@ -44,12 +40,11 @@
     padding-top: 92px;
   }
 
-  .heading-partner {
+  .mb-md-30 {
     margin-bottom: 30px;
   }
 
   .partners-list {
-    width: 512px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -76,21 +71,12 @@
   .button-other {
     max-width: 192px;
   }
-
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .background {
-    max-width: 1440px;
-    background-image: url("../img/Large.jpg");
-  } 
-
-  .main-nav {
-    width: 940px;
-  }
-
-  .partners-list {
-    width: 942px;
+    background-image: url("../img/bg-lg.png"),
+      linear-gradient(rgb(26, 25, 21), rgb(26, 25, 21));
   }
 
   .partners-list .partners-list-item {

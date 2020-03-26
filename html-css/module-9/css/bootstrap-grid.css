@@ -16,7 +16,7 @@ html {
 }
 
 .container {
-  max-width: 320px;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -67,11 +67,11 @@ html {
   }
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   .container, .container-sm, .container-md, .container-lg {
     max-width: 960px;
   }
-} */
+}
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
