@@ -131,7 +131,7 @@ img {
   transition: color, background-color 0.2s linear;
 }
 
-.header__item:not(:last-child) .header__item-link {
+.header__item:not(:last-child) {
   margin-right: 54px;
 }
 
