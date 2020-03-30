@@ -40,23 +40,19 @@
             <li class="header__item">
               <a class="header__item-link link" href="#">Contact</a>
             </li>
-            <li class="header__item">
-              <a class="header__item-link link" href="#">
-                <svg>
-                  <use href="img/icons.svg#icon-cart"></use>
-                </svg>
-                <span class="visually-hidden">Cart</span>
-              </a>
-            </li>
-            <li class="header__item">
-              <a class="header__item-link link" href="#">
-                <svg>
-                  <use href="img/icons.svg#icon-glass"></use>
-                </svg>
-                <span class="visually-hidden">Search</span>
-              </a>
-            </li>
           </ul>
+          <button class="header__item-button header__item-button--cart button">
+            <svg class="header__item-icon" width="18" height="15">
+              <use href="img/icons.svg#icon-cart"></use>
+            </svg>
+            <span class="visually-hidden">Cart</span>
+          </button>
+          <button class="header__item-button button">
+            <svg class="header__item-icon" width="18" height="18">
+              <use href="img/icons.svg#icon-glass"></use>
+            </svg>
+            <span class="visually-hidden">Search</span>
+          </button>
         </nav>
         <h1 class="header__title">
           <span class="header__preheading">Creative Template</span>Welcome to
@@ -325,7 +321,7 @@
           name="email"
           placeholder="Your Email..."
         />
-        <button class="footer__subscribe-button">Subscribe</button>
+        <button class="footer__subscribe-button button">Subscribe</button>
       </form>
     </footer>
   </body>
