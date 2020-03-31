@@ -1,0 +1,122 @@
+.team {
+  padding-top: 98px;
+  padding-bottom: 82px;
+}
+
+.team__header {
+  margin-bottom: 90px;
+}
+
+.team__intro {
+  font-size: 15px;
+  font-family: $font-secondary;
+  color: $font-color-third;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: -24px;
+}
+
+.team__list {
+  @include flex();
+  @extend %list;
+}
+
+.team__item-photo {
+  position: relative;
+  margin-bottom: 30px;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: 10px 10px #95e1d3;
+    transform: translate(-10px, -10px);
+    cursor: pointer;
+  }
+
+  &:hover > .team__item--overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.team__item--overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
+  opacity: 0;
+  transition: all 0.2s linear;
+  visibility: hidden;
+}
+
+.team__overlay-socials {
+  @extend %list;
+  display: flex;
+  width: max-content;
+  background-color: rgb(243, 129, 129);
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.team__overlay-link {
+  @extend %link;
+  background-color: rgb(252, 227, 138);
+  width: 56px;
+  height: 56px;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: rgb(243, 129, 129);
+  }
+}
+
+.team__overlay-icon svg {
+  display: block;
+  width: 100%;
+  height: 26px;
+  fill: rgb(243, 129, 129);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s linear;
+}
+
+.team__overlay-icon:not(:last-child) {
+  margin-right: 1px;
+}
+
+.team__overlay-link:hover > svg {
+  fill: #fff;
+}
+
+.team__item-name {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $font-main;
+  color: $font-color-secondary;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.team__item-possition {
+  font-size: 15px;
+  font-family: $font-secondary;
+  font-weight: 300;
+  color: $font-color-third;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}

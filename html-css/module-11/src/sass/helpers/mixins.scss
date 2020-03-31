@@ -1,0 +1,16 @@
+@mixin flex(
+  $flex-type: flex,
+  $justify: space-between,
+  $align-i: center,
+  $wrap: wrap
+) {
+  display: $flex-type;
+  justify-content: $justify;
+  align-items: $align-i;
+  flex-wrap: $wrap;
+}
+
+@mixin pseudo($content: "", $display: block) {
+  content: $content;
+  display: $display;
+}

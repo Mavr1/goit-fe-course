@@ -1,0 +1,19 @@
+{
+  "name": "module-11",
+  "version": "1.0.0",
+  "description": "Home Task",
+  "main": "index.js",
+  "scripts": {
+    "scss:build": "node-sass src/scss/styles.scss -o src/css",
+    "scss:watch": "node-sass --watch src/scss/styles.scss -o src/css",
+    "build": "npm run scss:build && npm run scss:watch"
+  },
+  "keywords": [
+    "SASS"
+  ],
+  "author": "Michael",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
