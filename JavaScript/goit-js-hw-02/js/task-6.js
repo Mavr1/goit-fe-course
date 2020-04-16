@@ -4,18 +4,24 @@ let input;
 const numbers = [];
 let total = 0;
 
-do {
+while (input !== null) {
   input = prompt("Введите число");
   if (isNaN(input)) {
     alert("Введено не число");
-  } else {
+  }
+
+  if (input !== null && input !== "") {
     numbers.push(input);
   }
-} while (input !== null);
+}
 
-for (let number of numbers) {
-  total = total + Number(number);
+if (numbers.length > 0) {
+  for (let number of numbers) {
+    total = total + Number(number);
+  }
+  console.log(`Общая сумма чисел: ${total}`);
+} else {
+  console.log("Массив пустой");
 }
 
 console.log(numbers);
-console.log(`Общая сумма чисел: ${total}`);
