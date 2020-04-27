@@ -24,7 +24,7 @@ class Car {
    *  distance - общий киллометраж, изначально 0
    */
   constructor(car) {
-    const { maxSpeed, speed = 0, isOn, distance, price } = car;
+    const { maxSpeed, speed = 0, isOn, distance = 0, price } = car;
     this.speed = speed;
     this.maxSpeed = maxSpeed;
     this.isOn = isOn;
@@ -95,7 +95,7 @@ class Car {
    */
   drive(hours) {
     if (this.isOn) {
-      this.distance = hours * this.speed;
+      this.distance = this.distance + hours * this.speed;
     }
   }
 }
