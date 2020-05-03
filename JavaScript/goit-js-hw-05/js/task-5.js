@@ -119,3 +119,14 @@ Car.getSpecs(mustang);
 console.log(mustang.price); // 2000
 mustang.price = 4000;
 console.log(mustang.price); // 4000
+
+function getSpecs(car) {
+  const { maxSpeed, speed, isOn, distance, price } = car;
+  console.log(
+    `maxSpeed: ${maxSpeed}, speed: ${speed}, isOn: ${isOn}, distance: ${distance}, price: ${price}`
+  );
+}
+
+console.dir(getSpecs);
+
+console.log(typeof Car);
