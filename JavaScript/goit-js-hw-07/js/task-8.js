@@ -1,6 +1,6 @@
 "use strict";
 
-const input = document.querySelector("input");
+const input = document.querySelector("#controls").children[0];
 const creatBtn = document.querySelector("button[data-action='render'");
 const clearBtn = document.querySelector("button[data-action='destroy'");
 const boxes = document.querySelector("#boxes");

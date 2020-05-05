@@ -9,6 +9,3 @@ const onInput = () =>
     : (output.textContent = "незнакомец");
 
 input.addEventListener("input", onInput);
-
-console.dir(input);
-console.dir(output);
