@@ -3,7 +3,7 @@
 const input = document.querySelector("#validation-input");
 
 const onLooseFocus = function () {
-  if (input.value.length < 6) {
+  if (input.value.length !== 6) {
     input.classList.contains("valid")
       ? input.classList.replace("valid", "invalid")
       : input.classList.add("invalid");
