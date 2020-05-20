@@ -3,7 +3,11 @@
 // ======================= Task 1 =========================
 
 const delay = (ms) => {
-  return new Promise((resolve) => resolve(ms));
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(ms);
+    }, ms);
+  });
 };
 
 const logger = (time) => console.log(`Resolved after ${time}ms`);
@@ -26,7 +30,6 @@ const toggleUserState = (allUsers, userName) => {
   const updatedUsers = allUsers.map((user) =>
     user.name === userName ? { ...user, active: !user.active } : user
   );
-  console.log(Promise.resolve(updatedUsers));
   return Promise.resolve(updatedUsers);
 };
 
