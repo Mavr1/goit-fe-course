@@ -4,6 +4,10 @@ class CountdownTimer {
   constructor({ selector, targetDate }) {
     this.selector = selector;
     this.targetDate = targetDate;
+    this.spanDays = document.querySelector("span[data-value='days']");
+    this.spanHours = document.querySelector("span[data-value='hours']");
+    this.spanMins = document.querySelector("span[data-value='mins']");
+    this.spanSecs = document.querySelector("span[data-value='secs']");
   }
 
   timerPeriod() {
@@ -24,14 +28,10 @@ class CountdownTimer {
 
   insert = () => {
     const [dd, hh, mm, ss] = this.timerFormat();
-    const spanDays = document.querySelector("span[data-value='days']");
-    const spanHours = document.querySelector("span[data-value='hours']");
-    const spanMins = document.querySelector("span[data-value='mins']");
-    const spanSecs = document.querySelector("span[data-value='secs']");
-    spanDays.textContent = dd;
-    spanHours.textContent = hh;
-    spanMins.textContent = mm;
-    spanSecs.textContent = ss;
+    this.spanDays.textContent = dd;
+    this.spanHours.textContent = hh;
+    this.spanMins.textContent = mm;
+    this.spanSecs.textContent = ss;
   };
 
   timerStart() {
