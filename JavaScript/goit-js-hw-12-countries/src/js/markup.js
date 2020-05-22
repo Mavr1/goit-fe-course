@@ -8,9 +8,10 @@ export const uniqCountryMarkupTemplate = ([
 <p class="js_capital">${capital}</p>
 <p class="js_population">${population}</p>
 <ul class="js_languages">
-  <li class="languages-item"></li>
-  <li class="languages-item"></li>
-  <li class="languages-item"></li>
+${languages.reduce((acc, item) => {
+  acc += `<li class="languages-item">${item.name}</li>`;
+  return acc;
+}, '')}
 </ul>
 `;
 };

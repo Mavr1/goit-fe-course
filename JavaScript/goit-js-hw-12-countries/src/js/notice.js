@@ -5,9 +5,9 @@ const myStack = new Stack({
   dir2: 'right',
 });
 
-export const myAlert = () =>
+export const myAlert = message =>
   error({
-    text: "I'm an alert.",
+    text: message,
     type: 'error',
     sticker: false,
     maxTextHeight: null,

@@ -12,5 +12,11 @@ export const responseListCheck = responseList => {
     return;
   }
 
-  return myAlert();
+  if (responseList.length > 11) {
+    myAlert('Please specify you request');
+    return;
+  }
+
+  myAlert("Can't find your country");
+  return;
 };

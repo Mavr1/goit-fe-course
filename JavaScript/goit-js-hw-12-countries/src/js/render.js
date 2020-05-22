@@ -10,6 +10,7 @@ export const renderQueryCountries = countriesArr => {
 
 export const renderUniqCountry = countryArr => {
   const markup = uniqCountryMarkupTemplate(countryArr);
+  console.log(markup);
   const countriesListRef = document.querySelector('.js_countries');
   countriesListRef.innerHTML = markup;
 };
