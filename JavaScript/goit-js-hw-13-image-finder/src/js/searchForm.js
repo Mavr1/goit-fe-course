@@ -30,6 +30,7 @@ const onClickShow = () => {
 const onSubmit = e => {
   e.preventDefault();
   fetchData(e.target.elements.query.value);
+  e.target.reset();
 };
 
 showSearchFormRef.addEventListener('click', onClickShow);

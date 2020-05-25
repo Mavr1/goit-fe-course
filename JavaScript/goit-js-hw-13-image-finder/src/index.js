@@ -1,6 +1,7 @@
 import './styles.css';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import './js/searchForm';
+import './js/lightbox';
 
 //TODO:
 //[x] Зарегистрируйся и получи ключ.
