@@ -1,4 +1,3 @@
-import { renderQueryCountries } from './render';
 import { responseListCheck } from './responseLogic';
 
 export const fetchData = country => {

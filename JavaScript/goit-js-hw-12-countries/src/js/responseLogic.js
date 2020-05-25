@@ -1,5 +1,5 @@
 import { myAlert } from './notice';
-import { renderQueryCountries, renderUniqCountry } from './render';
+import { renderQueryCountries, renderUniqCountry, insert } from './render';
 
 export const responseListCheck = responseList => {
   if (responseList.length > 1 && responseList.length < 11) {
@@ -13,6 +13,7 @@ export const responseListCheck = responseList => {
   }
 
   if (responseList.length > 11) {
+    insert('.js_countries', '');
     myAlert('Please specify you request');
     return;
   }
