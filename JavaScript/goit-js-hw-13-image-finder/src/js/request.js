@@ -6,5 +6,12 @@ export const fetchData = (request, page) => {
   const key = '16728948-c39c5dcc25e25d8fd8d200637';
   fetch(baseUrl + bodyFetch + key)
     .then(response => response.json())
-    .then(data => galleryMarkup(data.hits));
+    .then(data => {
+      galleryMarkup(data.hits);
+      if (page < 2) return;
+      window.scroll({
+        top: document.documentElement.offsetHeight,
+        behavior: 'smooth',
+      });
+    });
 };
