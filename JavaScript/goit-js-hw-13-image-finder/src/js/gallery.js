@@ -8,7 +8,7 @@ export const galleryMarkup = objData => {
 const callback = image => {
   return `<li class="gallery__item">
   <div class="photo-card">
-    <img src="${image.webformatURL}" alt="${image.tags}" data-sourceLarge= "${image.largeImageURL}" width = "350"/>
+    <img class="image" src="${image.webformatURL}" alt="${image.tags}" data-sourceLarge= "${image.largeImageURL}" width = "350"/>
     <div class="stats">
       <p class="stats-item">
         <i class="material-icons">thumb_up</i>

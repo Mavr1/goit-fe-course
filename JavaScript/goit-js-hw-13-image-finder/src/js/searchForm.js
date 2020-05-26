@@ -1,11 +1,13 @@
-import { insert, deleteElem } from './services';
+import { insert, deleteElem, clearElem } from './services';
 import { fetchData } from './request';
+import { showButton } from './pagination';
 
 const searchFormContainer = document.querySelector('.js_search-form');
 const showSearchFormRef = searchFormContainer.querySelector('.js_show-search');
 const showSearchFormLabelRef = showSearchFormRef.querySelector(
   '.js_show-search-lable',
 );
+const galleryRef = document.querySelector('.js_gallery');
 
 const searchFormMarkup = `
 <form class="search-form" id="search-form">
@@ -27,9 +29,18 @@ const onClickShow = () => {
   deleteElem(form);
 };
 
+export const query = {
+  request: '',
+  page: 0,
+};
+
 const onSubmit = e => {
+  clearElem(galleryRef);
+  query.page = 1;
+  query.request = e.target.elements.query.value;
   e.preventDefault();
-  fetchData(e.target.elements.query.value);
+  fetchData(query.request, query.page);
+  showButton();
   e.target.reset();
 };
 

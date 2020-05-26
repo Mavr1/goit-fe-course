@@ -16,3 +16,13 @@ export const deleteElem = element => {
   const parent = document.querySelector(`${element}`);
   parent.outerHTML = '';
 };
+
+export const clearElem = element => {
+  if (typeof element === 'object') {
+    element.innerHTML = '';
+    return;
+  }
+
+  const parent = document.querySelector(`${element}`);
+  parent.innerHTML = '';
+};

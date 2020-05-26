@@ -2,6 +2,7 @@ import './styles.css';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import './js/searchForm';
 import './js/lightbox';
+// import './js/infiniteScroll'; так и не заработал - CORS!
 
 //TODO:
 //[x] Зарегистрируйся и получи ключ.
@@ -16,5 +17,5 @@ import './js/lightbox';
 //[x] Галерея изображений.
 //[x] Карточка изображения.
 //[x] Для иконок используются Material icons. Для их корректной работы достаточно в HTML-файле добавить ссылку на веб-шрифт.
-//[] Модальное окно, например basicLightbox.
-//[] Бесконечную загрузкуа при скроле, используя плагин Infinite Scroll.
+//[x] Модальное окно, например basicLightbox.
+//[] FIXME: Бесконечную загрузкуа при скроле, используя плагин Infinite Scroll. - не получилось
