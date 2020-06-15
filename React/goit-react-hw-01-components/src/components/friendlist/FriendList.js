@@ -1,4 +1,6 @@
 import React from 'react';
+import T from 'prop-types';
+
 import '../friendlist/FriendList.css';
 
 export const FriendList = ({ children }) => (
@@ -14,9 +16,19 @@ export const FriendListItem = ({ friends }) => (
         ) : (
           <span className="status offLine"></span>
         )}
-        <img className="avatar" src={avatar} alt="" width="48" />
+        <img className="avatar" src={avatar} alt={name} width="48" />
         <p className="name">{name}</p>
       </li>
     ))}
   </>
 );
+
+FriendListItem.propTypes = {
+  friends: T.arrayOf(
+    T.shape({
+      avatar: T.string,
+      name: T.string.isRequired,
+      isOnline: T.bool.isRequired,
+    })
+  ),
+};

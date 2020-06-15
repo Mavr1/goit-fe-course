@@ -1,4 +1,6 @@
 import React from 'react';
+import T from 'prop-types';
+
 import '../profile/Profile.css';
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
@@ -26,5 +28,20 @@ const Profile = ({ name, tag, location, avatar, stats }) => (
     </ul>
   </div>
 );
+
+Profile.defaultProps = {
+  location: 'no location specified',
+};
+
+Profile.propTypes = {
+  avatar: T.string,
+  name: T.string.isRequired,
+  location: T.string.isRequired,
+  stats: T.shape({
+    followers: T.number.isRequired,
+    views: T.number.isRequired,
+    likes: T.number.isRequired,
+  }).isRequired,
+};
 
 export default Profile;

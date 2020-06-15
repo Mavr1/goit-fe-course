@@ -1,4 +1,6 @@
 import React from 'react';
+import T from 'prop-types';
+
 import '../transactions/TransactionHistory.css';
 
 const TransactionHistory = ({ items }) => (
@@ -21,5 +23,11 @@ const TransactionHistory = ({ items }) => (
     </tbody>
   </table>
 );
+
+TransactionHistory.propTypes = {
+  item: T.arrayOf(
+    T.shape({ followers: T.number, views: T.number, likes: T.number })
+  ),
+};
 
 export default TransactionHistory;

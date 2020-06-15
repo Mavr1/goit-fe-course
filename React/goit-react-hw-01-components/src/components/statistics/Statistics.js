@@ -1,4 +1,6 @@
 import React from 'react';
+import T from 'prop-types';
+
 import '../statistics/Statistics.css';
 
 const getColor = () => {
@@ -21,5 +23,12 @@ const Statistics = ({ title, stats }) => (
     </ul>
   </section>
 );
+
+Statistics.propTypes = {
+  title: T.string,
+  stats: T.arrayOf(
+    T.shape({ label: T.string.isRequired, percentage: T.number.isRequired })
+  ).isRequired,
+};
 
 export default Statistics;
