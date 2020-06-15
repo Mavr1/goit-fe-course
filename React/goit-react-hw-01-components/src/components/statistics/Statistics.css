@@ -1,0 +1,22 @@
+.statistics {
+  text-align: center;
+  width: max-content;
+}
+
+.stat-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  width: 100px;
+  height: 30px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.label {
+  /* display: block; */
+}

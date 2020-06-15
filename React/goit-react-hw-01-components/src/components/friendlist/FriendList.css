@@ -1,0 +1,27 @@
+.friendList-item {
+  display: flex;
+  align-items: center;
+}
+
+.friendList-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.avatar {
+  margin-right: 20px;
+}
+
+.status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.onLine {
+  background-color: teal;
+}
+
+.offLine {
+  background-color: palevioletred;
+}
