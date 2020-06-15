@@ -2,26 +2,26 @@ import React from 'react';
 import '../profile/Profile.css';
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
-  <div class="profile">
-    <div class="description">
-      <img src={avatar} alt="user avatar" class="avatar" />
-      <p class="name">{name}</p>
-      <p class="tag">{tag}</p>
-      <p class="location">{location}</p>
+  <div className="profile">
+    <div className="description">
+      <img src={avatar} alt="user avatar" className="avatar" />
+      <p className="name">{name}</p>
+      <p className="tag">{tag}</p>
+      <p className="location">{location}</p>
     </div>
 
-    <ul class="stats">
+    <ul className="stats">
       <li>
-        <span class="label">Followers</span>
-        <span class="quantity"> {stats.followers}</span>
+        <span className="label">Followers</span>
+        <span className="quantity"> {stats.followers}</span>
       </li>
       <li>
-        <span class="label">Views</span>
-        <span class="quantity"> {stats.views}</span>
+        <span className="label">Views</span>
+        <span className="quantity"> {stats.views}</span>
       </li>
       <li>
-        <span class="label">Likes</span>
-        <span class="quantity"> {stats.likes}</span>
+        <span className="label">Likes</span>
+        <span className="quantity"> {stats.likes}</span>
       </li>
     </ul>
   </div>

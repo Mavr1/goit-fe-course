@@ -4,9 +4,11 @@ import Profile from '../profile/Profile';
 import Statistics from '../statistics/Statistics';
 import { FriendList } from '../friendlist/FriendList';
 import { FriendListItem } from '../friendlist/FriendList';
+import TransactionHistory from '../transactions/TransactionHistory';
 import user from '../../util/user.json';
 import statisticalData from '../../util/statistical-data.json';
 import friends from '../../util/friends.json';
+import transactions from '../../util/transactions.json';
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
         <FriendList>
           <FriendListItem friends={friends} />
         </FriendList>
+      </div>
+      <div className="task-4">
+        <h2>Задание 4 - История транзакций</h2>
+        <TransactionHistory items={transactions} />
       </div>
     </div>
   );

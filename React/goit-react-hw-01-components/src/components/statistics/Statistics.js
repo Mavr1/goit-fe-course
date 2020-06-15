@@ -8,14 +8,14 @@ const getColor = () => {
 };
 
 const Statistics = ({ title, stats }) => (
-  <section class="statistics">
-    {title && <h2 class="title">{title}</h2>}
+  <section className="statistics">
+    {title && <h2 className="title">{title}</h2>}
 
-    <ul class="stat-list">
+    <ul className="stat-list">
       {stats.map((item) => (
-        <li class="item" key={item.id} style={getColor()}>
-          <span class="label"> {item.label}</span>
-          <span class="percentage"> {item.percentage}%</span>
+        <li className="item" key={item.id} style={getColor()}>
+          <span className="label"> {item.label}</span>
+          <span className="percentage"> {item.percentage}%</span>
         </li>
       ))}
     </ul>
