@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import '../friendlist/FriendList.css';
+import styles from '../friendlist/FriendList.module.css';
 
 export const FriendList = ({ children }) => (
   <ul className="friend-list">{children}</ul>
@@ -10,14 +10,14 @@ export const FriendList = ({ children }) => (
 export const FriendListItem = ({ friends }) => (
   <>
     {friends.map(({ avatar, name, isOnline, id }) => (
-      <li className="friendList-item" key={id}>
+      <li className={styles.friendListItem} key={id}>
         {isOnline ? (
-          <span className="status onLine"></span>
+          <span className={styles.statusOnLine}></span>
         ) : (
-          <span className="status offLine"></span>
+          <span className={styles.statusOffLine}></span>
         )}
-        <img className="avatar" src={avatar} alt={name} width="48" />
-        <p className="name">{name}</p>
+        <img className={styles.avatar} src={avatar} alt={name} width="48" />
+        <p className={styles.name}>{name}</p>
       </li>
     ))}
   </>

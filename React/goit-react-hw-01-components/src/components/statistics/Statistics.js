@@ -1,7 +1,25 @@
 import React from 'react';
 import T from 'prop-types';
+import styled from 'styled-components';
 
-import '../statistics/Statistics.css';
+const Section = styled.section`
+  text-align: center;
+  width: max-content;
+`;
+
+const Ul = styled.ul`
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+`;
+
+const Li = styled.li`
+  width: 100px;
+  height: 30px;
+  justify-content: space-between;
+  text-align: center;
+`;
 
 const getColor = () => {
   const randomColor = Math.round(Math.random() * 15000000).toString(16);
@@ -10,18 +28,18 @@ const getColor = () => {
 };
 
 const Statistics = ({ title, stats }) => (
-  <section className="statistics">
+  <Section>
     {title && <h2 className="title">{title}</h2>}
 
-    <ul className="stat-list">
+    <Ul>
       {stats.map((item) => (
-        <li className="item" key={item.id} style={getColor()}>
+        <Li key={item.id} style={getColor()}>
           <span className="label"> {item.label}</span>
           <span className="percentage"> {item.percentage}%</span>
-        </li>
+        </Li>
       ))}
-    </ul>
-  </section>
+    </Ul>
+  </Section>
 );
 
 Statistics.propTypes = {

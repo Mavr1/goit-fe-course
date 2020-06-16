@@ -1,9 +1,9 @@
-.friendList-item {
+.friendListItem {
   display: flex;
   align-items: center;
 }
 
-.friendList-item:not(:last-child) {
+.friendListItem:not(:last-child) {
   margin-bottom: 15px;
 }
 
@@ -18,10 +18,12 @@
   margin-right: 15px;
 }
 
-.onLine {
+.statusOnLine {
+  composes: status;
   background-color: teal;
 }
 
-.offLine {
+.statusOffLine {
+  composes: status;
   background-color: palevioletred;
 }

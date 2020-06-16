@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Profile from '../profile/Profile';
 import Statistics from '../statistics/Statistics';
 import { FriendList } from '../friendlist/FriendList';
@@ -12,7 +12,7 @@ import transactions from '../../util/transactions.json';
 
 function App() {
   return (
-    <div className="App container">
+    <div className={styles.container}>
       <div className="task-1">
         <h2>Задание 1 - Профиль социальной сети</h2>
         <Profile
